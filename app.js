@@ -1,7 +1,6 @@
 const imagesArea = document.querySelector('.images');
 const gallery = document.querySelector('.gallery');
 const galleryHeader = document.querySelector('.gallery-header');
-const searchInput = document.getElementById('search');
 const searchBtn = document.getElementById('search-btn');
 const sliderBtn = document.getElementById('create-slider');
 const sliderContainer = document.getElementById('sliders');
@@ -117,14 +116,6 @@ searchBtn.addEventListener('click', function () {
   getImages(search.value)
   sliders.length = 0;
 })
-
-searchInput.addEventListener("keyup", function (event) {
-  if (event.key === 'enter') {
-    event.preventDefault();
-    event.stopImmediatePropagation()
-    document.getElementById("search-btn").click();
-  }
-});
 
 sliderBtn.addEventListener('click', function () {
   createSlider()
